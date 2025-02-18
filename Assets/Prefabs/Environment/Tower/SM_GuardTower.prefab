@@ -1,0 +1,915 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5559843190244161323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6494947128571052629}
+  m_Layer: 0
+  m_Name: SM_GuardTower
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6494947128571052629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5559843190244161323}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 73, y: 0, z: 26.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7646148508612530542}
+  - {fileID: 8824656763196733252}
+  - {fileID: 30371734466021838}
+  - {fileID: 8578873424388873}
+  - {fileID: 9077022606264030575}
+  - {fileID: 3333660268062951777}
+  - {fileID: 8066107020589000204}
+  - {fileID: 7903197459165155237}
+  - {fileID: 120282442859504320}
+  - {fileID: 2983561346190452676}
+  - {fileID: 8927945914049788862}
+  - {fileID: 378241151033739718}
+  - {fileID: 6011342623875997933}
+  - {fileID: 1242565040952684707}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &8578873482269120
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6494947128571052629}
+    m_Modifications:
+    - target: {fileID: 1030976200, guid: abc00000000010266937113557400378, type: 3}
+      propertyPath: m_Name
+      value: SM_GuardTower_LG_GT_Floor_Bottom
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976201, guid: abc00000000010266937113557400378, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976201, guid: abc00000000010266937113557400378, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976201, guid: abc00000000010266937113557400378, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976201, guid: abc00000000010266937113557400378, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976201, guid: abc00000000010266937113557400378, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976201, guid: abc00000000010266937113557400378, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976201, guid: abc00000000010266937113557400378, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976201, guid: abc00000000010266937113557400378, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976201, guid: abc00000000010266937113557400378, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976201, guid: abc00000000010266937113557400378, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abc00000000010266937113557400378, type: 3}
+--- !u!4 &8578873424388873 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1030976201, guid: abc00000000010266937113557400378, type: 3}
+  m_PrefabInstance: {fileID: 8578873482269120}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &30371733483305767
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6494947128571052629}
+    m_Modifications:
+    - target: {fileID: 1030976232, guid: abc00000000015901222984471330942, type: 3}
+      propertyPath: m_Name
+      value: SM_GuardTower_LG_GT_Ladder
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976233, guid: abc00000000015901222984471330942, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976233, guid: abc00000000015901222984471330942, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976233, guid: abc00000000015901222984471330942, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976233, guid: abc00000000015901222984471330942, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976233, guid: abc00000000015901222984471330942, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976233, guid: abc00000000015901222984471330942, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976233, guid: abc00000000015901222984471330942, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976233, guid: abc00000000015901222984471330942, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976233, guid: abc00000000015901222984471330942, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976233, guid: abc00000000015901222984471330942, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abc00000000015901222984471330942, type: 3}
+--- !u!4 &30371734466021838 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1030976233, guid: abc00000000015901222984471330942, type: 3}
+  m_PrefabInstance: {fileID: 30371733483305767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &120282443174907962
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6494947128571052629}
+    m_Modifications:
+    - target: {fileID: 1030976249, guid: abc00000000017491279322181565336, type: 3}
+      propertyPath: m_Name
+      value: SM_GuardTower_LG_GT_Roof
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976250, guid: abc00000000017491279322181565336, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976250, guid: abc00000000017491279322181565336, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976250, guid: abc00000000017491279322181565336, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976250, guid: abc00000000017491279322181565336, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0051727295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976250, guid: abc00000000017491279322181565336, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976250, guid: abc00000000017491279322181565336, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976250, guid: abc00000000017491279322181565336, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976250, guid: abc00000000017491279322181565336, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976250, guid: abc00000000017491279322181565336, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976250, guid: abc00000000017491279322181565336, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abc00000000017491279322181565336, type: 3}
+--- !u!4 &120282442859504320 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1030976250, guid: abc00000000017491279322181565336, type: 3}
+  m_PrefabInstance: {fileID: 120282443174907962}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &378241150848236245
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6494947128571052629}
+    m_Modifications:
+    - target: {fileID: 1030976274, guid: abc00000000012558021335940707623, type: 3}
+      propertyPath: m_Name
+      value: SM_GuardTower_LG_Trapdoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976275, guid: abc00000000012558021335940707623, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976275, guid: abc00000000012558021335940707623, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976275, guid: abc00000000012558021335940707623, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976275, guid: abc00000000012558021335940707623, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976275, guid: abc00000000012558021335940707623, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976275, guid: abc00000000012558021335940707623, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976275, guid: abc00000000012558021335940707623, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976275, guid: abc00000000012558021335940707623, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976275, guid: abc00000000012558021335940707623, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976275, guid: abc00000000012558021335940707623, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abc00000000012558021335940707623, type: 3}
+--- !u!4 &378241151033739718 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1030976275, guid: abc00000000012558021335940707623, type: 3}
+  m_PrefabInstance: {fileID: 378241150848236245}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1242565041840898674
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6494947128571052629}
+    m_Modifications:
+    - target: {fileID: 1030976208, guid: abc00000000005941395580302337994, type: 3}
+      propertyPath: m_Name
+      value: SM_GuardTower_LG_GT_Floor_Cabin
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976209, guid: abc00000000005941395580302337994, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976209, guid: abc00000000005941395580302337994, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976209, guid: abc00000000005941395580302337994, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976209, guid: abc00000000005941395580302337994, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976209, guid: abc00000000005941395580302337994, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976209, guid: abc00000000005941395580302337994, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976209, guid: abc00000000005941395580302337994, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976209, guid: abc00000000005941395580302337994, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976209, guid: abc00000000005941395580302337994, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976209, guid: abc00000000005941395580302337994, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abc00000000005941395580302337994, type: 3}
+--- !u!4 &1242565040952684707 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1030976209, guid: abc00000000005941395580302337994, type: 3}
+  m_PrefabInstance: {fileID: 1242565041840898674}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2983561346239943965
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6494947128571052629}
+    m_Modifications:
+    - target: {fileID: 1030976216, guid: abc00000000000394497411626368460, type: 3}
+      propertyPath: m_Name
+      value: SM_GuardTower_LG_GT_Interior_Cabin
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976217, guid: abc00000000000394497411626368460, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976217, guid: abc00000000000394497411626368460, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976217, guid: abc00000000000394497411626368460, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976217, guid: abc00000000000394497411626368460, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976217, guid: abc00000000000394497411626368460, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976217, guid: abc00000000000394497411626368460, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976217, guid: abc00000000000394497411626368460, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976217, guid: abc00000000000394497411626368460, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976217, guid: abc00000000000394497411626368460, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976217, guid: abc00000000000394497411626368460, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abc00000000000394497411626368460, type: 3}
+--- !u!4 &2983561346190452676 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1030976217, guid: abc00000000000394497411626368460, type: 3}
+  m_PrefabInstance: {fileID: 2983561346239943965}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3333660267577523072
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6494947128571052629}
+    m_Modifications:
+    - target: {fileID: 1030976224, guid: abc00000000012574251035439475801, type: 3}
+      propertyPath: m_Name
+      value: SM_GuardTower_LG_GT_InteriorWalls
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976225, guid: abc00000000012574251035439475801, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976225, guid: abc00000000012574251035439475801, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976225, guid: abc00000000012574251035439475801, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976225, guid: abc00000000012574251035439475801, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976225, guid: abc00000000012574251035439475801, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976225, guid: abc00000000012574251035439475801, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976225, guid: abc00000000012574251035439475801, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976225, guid: abc00000000012574251035439475801, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976225, guid: abc00000000012574251035439475801, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976225, guid: abc00000000012574251035439475801, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abc00000000012574251035439475801, type: 3}
+--- !u!4 &3333660268062951777 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1030976225, guid: abc00000000012574251035439475801, type: 3}
+  m_PrefabInstance: {fileID: 3333660267577523072}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6011342624193532447
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6494947128571052629}
+    m_Modifications:
+    - target: {fileID: 1030976241, guid: abc00000000009822226287433776182, type: 3}
+      propertyPath: m_Name
+      value: SM_GuardTower_LG_GT_LedgeHolders
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976242, guid: abc00000000009822226287433776182, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976242, guid: abc00000000009822226287433776182, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976242, guid: abc00000000009822226287433776182, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976242, guid: abc00000000009822226287433776182, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976242, guid: abc00000000009822226287433776182, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976242, guid: abc00000000009822226287433776182, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976242, guid: abc00000000009822226287433776182, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976242, guid: abc00000000009822226287433776182, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976242, guid: abc00000000009822226287433776182, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976242, guid: abc00000000009822226287433776182, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abc00000000009822226287433776182, type: 3}
+--- !u!4 &6011342623875997933 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1030976242, guid: abc00000000009822226287433776182, type: 3}
+  m_PrefabInstance: {fileID: 6011342624193532447}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7646148507724211167
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6494947128571052629}
+    m_Modifications:
+    - target: {fileID: 1030976176, guid: abc00000000006286573885814789777, type: 3}
+      propertyPath: m_Name
+      value: SM_GuardTower_LG_GT_Doorframe_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976177, guid: abc00000000006286573885814789777, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976177, guid: abc00000000006286573885814789777, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976177, guid: abc00000000006286573885814789777, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976177, guid: abc00000000006286573885814789777, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976177, guid: abc00000000006286573885814789777, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976177, guid: abc00000000006286573885814789777, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976177, guid: abc00000000006286573885814789777, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976177, guid: abc00000000006286573885814789777, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976177, guid: abc00000000006286573885814789777, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976177, guid: abc00000000006286573885814789777, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abc00000000006286573885814789777, type: 3}
+--- !u!4 &7646148508612530542 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1030976177, guid: abc00000000006286573885814789777, type: 3}
+  m_PrefabInstance: {fileID: 7646148507724211167}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7903197459482705081
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6494947128571052629}
+    m_Modifications:
+    - target: {fileID: 1030976283, guid: abc00000000002812097352855500405, type: 3}
+      propertyPath: m_Name
+      value: SM_GuardTower_LG_Trapdoor_Frame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976284, guid: abc00000000002812097352855500405, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976284, guid: abc00000000002812097352855500405, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976284, guid: abc00000000002812097352855500405, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976284, guid: abc00000000002812097352855500405, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976284, guid: abc00000000002812097352855500405, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976284, guid: abc00000000002812097352855500405, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976284, guid: abc00000000002812097352855500405, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976284, guid: abc00000000002812097352855500405, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976284, guid: abc00000000002812097352855500405, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976284, guid: abc00000000002812097352855500405, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abc00000000002812097352855500405, type: 3}
+--- !u!4 &7903197459165155237 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1030976284, guid: abc00000000002812097352855500405, type: 3}
+  m_PrefabInstance: {fileID: 7903197459482705081}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8066107020531373261
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6494947128571052629}
+    m_Modifications:
+    - target: {fileID: 1030976192, guid: abc00000000018045776503752837767, type: 3}
+      propertyPath: m_Name
+      value: SM_GuardTower_LG_GT_ExteriorWalls
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976193, guid: abc00000000018045776503752837767, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976193, guid: abc00000000018045776503752837767, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976193, guid: abc00000000018045776503752837767, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976193, guid: abc00000000018045776503752837767, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976193, guid: abc00000000018045776503752837767, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976193, guid: abc00000000018045776503752837767, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976193, guid: abc00000000018045776503752837767, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976193, guid: abc00000000018045776503752837767, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976193, guid: abc00000000018045776503752837767, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976193, guid: abc00000000018045776503752837767, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abc00000000018045776503752837767, type: 3}
+--- !u!4 &8066107020589000204 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1030976193, guid: abc00000000018045776503752837767, type: 3}
+  m_PrefabInstance: {fileID: 8066107020531373261}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8824656762581124175
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6494947128571052629}
+    m_Modifications:
+    - target: {fileID: 1030976266, guid: abc00000000004759098962614673717, type: 3}
+      propertyPath: m_Name
+      value: SM_GuardTower_LG_GT_Windows
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976267, guid: abc00000000004759098962614673717, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976267, guid: abc00000000004759098962614673717, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976267, guid: abc00000000004759098962614673717, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976267, guid: abc00000000004759098962614673717, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976267, guid: abc00000000004759098962614673717, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976267, guid: abc00000000004759098962614673717, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976267, guid: abc00000000004759098962614673717, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976267, guid: abc00000000004759098962614673717, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976267, guid: abc00000000004759098962614673717, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976267, guid: abc00000000004759098962614673717, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abc00000000004759098962614673717, type: 3}
+--- !u!4 &8824656763196733252 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1030976267, guid: abc00000000004759098962614673717, type: 3}
+  m_PrefabInstance: {fileID: 8824656762581124175}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8927945913593563399
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6494947128571052629}
+    m_Modifications:
+    - target: {fileID: 1030976184, guid: abc00000000008532394154291672102, type: 3}
+      propertyPath: m_Name
+      value: SM_GuardTower_LG_GT_Exterior_Cabin
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976185, guid: abc00000000008532394154291672102, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976185, guid: abc00000000008532394154291672102, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976185, guid: abc00000000008532394154291672102, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976185, guid: abc00000000008532394154291672102, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976185, guid: abc00000000008532394154291672102, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976185, guid: abc00000000008532394154291672102, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976185, guid: abc00000000008532394154291672102, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976185, guid: abc00000000008532394154291672102, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976185, guid: abc00000000008532394154291672102, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976185, guid: abc00000000008532394154291672102, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abc00000000008532394154291672102, type: 3}
+--- !u!4 &8927945914049788862 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1030976185, guid: abc00000000008532394154291672102, type: 3}
+  m_PrefabInstance: {fileID: 8927945913593563399}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &9077022606220961388
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6494947128571052629}
+    m_Modifications:
+    - target: {fileID: 1030976258, guid: abc00000000010757790254033502204, type: 3}
+      propertyPath: m_Name
+      value: SM_GuardTower_LG_GT_WindowFrames
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976259, guid: abc00000000010757790254033502204, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976259, guid: abc00000000010757790254033502204, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976259, guid: abc00000000010757790254033502204, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976259, guid: abc00000000010757790254033502204, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976259, guid: abc00000000010757790254033502204, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976259, guid: abc00000000010757790254033502204, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976259, guid: abc00000000010757790254033502204, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976259, guid: abc00000000010757790254033502204, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976259, guid: abc00000000010757790254033502204, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030976259, guid: abc00000000010757790254033502204, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: abc00000000010757790254033502204, type: 3}
+--- !u!4 &9077022606264030575 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1030976259, guid: abc00000000010757790254033502204, type: 3}
+  m_PrefabInstance: {fileID: 9077022606220961388}
+  m_PrefabAsset: {fileID: 0}
