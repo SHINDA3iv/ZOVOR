@@ -21,6 +21,8 @@ public class KeyScript : MonoBehaviour
     public AudioClip insertSound;
     private AudioSource audioSource;
 
+    private ConfigurableJoint joint;
+
     void Start()
     {
         grabInteractable = GetComponent<XRGrabInteractable>();
@@ -83,17 +85,19 @@ public class KeyScript : MonoBehaviour
         transform.position = socket.position;
         transform.rotation = socket.rotation;
 
+        grabInteractable.trackPosition = false;
+
         CreateAndConfigureJoint();
         rotatableObject.OnObjectRotatedEvent += DoorOpened;
     }
 
     private void CreateAndConfigureJoint()
     {
-        //FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
+        FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
 
-        //fixedJoint.connectedBody = door1Rigidbody;
+        fixedJoint.connectedBody = door1Rigidbody;
 
-        ConfigurableJoint joint = gameObject.AddComponent<ConfigurableJoint>();
+        joint = gameObject.AddComponent<ConfigurableJoint>();
 
         joint.connectedBody = socket.GetComponent<Rigidbody>();
         if (joint.connectedBody == null)
@@ -130,6 +134,8 @@ public class KeyScript : MonoBehaviour
 
         door1Rigidbody.isKinematic = false;
         door2Rigidbody.isKinematic = false;
+
+        joint.angularXMotion = ConfigurableJointMotion.Locked;
 
         rotatableObject.OnObjectRotatedEvent -= DoorOpened;
     }
