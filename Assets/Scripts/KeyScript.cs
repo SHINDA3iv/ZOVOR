@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Sockets;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -7,14 +8,17 @@ public class KeyScript : MonoBehaviour
 {
     private XRGrabInteractable grabInteractable;
     private RotatableObject rotatableObject;
+    private new Rigidbody rigidbody;
 
     [SerializeField] private HingeJoint door1Hinge;
     [SerializeField] private HingeJoint door2Hinge;
+    [SerializeField] private HandleXRGrabInteractable door1Handle;
+    [SerializeField] private HandleXRGrabInteractable door2Handle;
 
     private Rigidbody door1Rigidbody;
     private Rigidbody door2Rigidbody;
 
-    public Transform socket;
+    public GameObject socket;
 
     private bool isInserted = false;
 
@@ -23,10 +27,14 @@ public class KeyScript : MonoBehaviour
 
     private ConfigurableJoint joint;
 
+    private Quaternion initialControllerRotation;
+    private Quaternion initialObjectRotation;
+
     void Start()
     {
         grabInteractable = GetComponent<XRGrabInteractable>();
         rotatableObject = GetComponent<RotatableObject>();
+        rigidbody = GetComponent<Rigidbody>();
 
         door1Rigidbody = door1Hinge.GetComponent<Rigidbody>();
         door2Rigidbody = door2Hinge.GetComponent<Rigidbody>();
@@ -40,14 +48,43 @@ public class KeyScript : MonoBehaviour
 
     private void OnSelectEntered(SelectEnterEventArgs args)
     {
-        StartCoroutine(CheckKeyMovement());
+        if (!isInserted)
+        {
+            transform.rotation = socket.transform.rotation;
+            StartCoroutine(CheckKeyMovement());
+        }
+        else
+        {
+            initialControllerRotation = args.interactorObject.transform.rotation;
+            initialObjectRotation = transform.rotation;
+
+            StartCoroutine(ApplyRotation(args.interactorObject.transform));
+        }
+    }
+
+    private IEnumerator ApplyRotation(Transform controllerTransform)
+    {
+        while (grabInteractable.isSelected)
+        {
+            Quaternion deltaRotation = controllerTransform.rotation * Quaternion.Inverse(initialControllerRotation);
+
+            float angleX = deltaRotation.eulerAngles.x;
+
+            if (angleX > 180) angleX -= 360;
+
+            angleX = Mathf.Clamp(angleX, 0f, 90f);
+
+            transform.rotation = initialObjectRotation * Quaternion.Euler(0, angleX, 0);
+
+            yield return null;
+        }
     }
 
     private void OnSelectExited(SelectExitEventArgs args)
     {
         StopAllCoroutines();
 
-        if (!isInserted && Vector3.Distance(transform.position, socket.position) < 0.1f)
+        if (!isInserted && Vector3.Distance(transform.position, socket.transform.position) < 0.1f)
         {
             InsertKey();
         }
@@ -67,7 +104,7 @@ public class KeyScript : MonoBehaviour
             yield return null;
         }
 
-        if (!isInserted && Vector3.Distance(transform.position, socket.position) < 0.1f)
+        if (!isInserted && Vector3.Distance(transform.position, socket.transform.position) < 0.1f)
         {
             InsertKey();
         }
@@ -82,21 +119,30 @@ public class KeyScript : MonoBehaviour
             audioSource.PlayOneShot(insertSound);
         }
 
-        transform.position = socket.position;
-        transform.rotation = socket.rotation;
+        transform.position = socket.transform.position;
+        transform.rotation = socket.transform.rotation;
+
+        int keyLayer = LayerMask.NameToLayer("Key");
+        door2Rigidbody.excludeLayers = keyLayer;
+
+        rigidbody.useGravity = false;
+        rigidbody.isKinematic = true;
+
+        rigidbody.constraints = RigidbodyConstraints.FreezePosition
+                      | RigidbodyConstraints.FreezeRotationY
+                      | RigidbodyConstraints.FreezeRotationZ;
 
         grabInteractable.trackPosition = false;
+        grabInteractable.trackRotation = false;
 
         CreateAndConfigureJoint();
+        rotatableObject.Enable();
+        rotatableObject.OnGrab();
         rotatableObject.OnObjectRotatedEvent += DoorOpened;
     }
 
     private void CreateAndConfigureJoint()
     {
-        FixedJoint fixedJoint = gameObject.AddComponent<FixedJoint>();
-
-        fixedJoint.connectedBody = door1Rigidbody;
-
         joint = gameObject.AddComponent<ConfigurableJoint>();
 
         joint.connectedBody = socket.GetComponent<Rigidbody>();
@@ -118,25 +164,24 @@ public class KeyScript : MonoBehaviour
         limit.limit = 90f;
         joint.lowAngularXLimit = limit;
         joint.highAngularXLimit = limit;
+        joint.axis = Vector3.right;
+        joint.secondaryAxis = Vector3.up;
     }
 
     private void DoorOpened()
     {
-        JointLimits door1Limits = door1Hinge.limits;
-        door1Limits.min = -90;
-        door1Limits.max = 90;
-        door1Hinge.limits = door1Limits; 
+        socket.SetActive(false);
 
-        JointLimits door2Limits = door2Hinge.limits;
-        door2Limits.min = -90;
-        door2Limits.max = 90;
-        door2Hinge.limits = door2Limits; 
+        door1Handle.enabled = true;
+        door2Handle.enabled = true;
 
         door1Rigidbody.isKinematic = false;
         door2Rigidbody.isKinematic = false;
 
         joint.angularXMotion = ConfigurableJointMotion.Locked;
+        GetComponent<Collider>().enabled = false;
 
+        rotatableObject.Disable();
         rotatableObject.OnObjectRotatedEvent -= DoorOpened;
     }
 
@@ -145,6 +190,7 @@ public class KeyScript : MonoBehaviour
         grabInteractable.selectEntered.RemoveListener(OnSelectEntered);
         grabInteractable.selectExited.RemoveListener(OnSelectExited);
 
+        rotatableObject.Disable();
         rotatableObject.OnObjectRotatedEvent -= DoorOpened;
     }
 }

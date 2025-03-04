@@ -11,7 +11,7 @@ public class RotatableObject : MonoBehaviour
     private bool _isRotated = false;
     private bool _rotationEventTriggered = false;
     private Quaternion _initialRotation;
-    private XRGrabInteractable grabInteractable;
+    private HandleXRGrabInteractable grabInteractable;
 
     /// <summary>
     /// Событие, вызываемое при повороте объекта.
@@ -30,30 +30,41 @@ public class RotatableObject : MonoBehaviour
     private void Start()
     {
         _initialRotation = transform.rotation;
-        grabInteractable = GetComponent<XRGrabInteractable>();
+        grabInteractable = GetComponent<HandleXRGrabInteractable>();
+    }
 
+    public void Enable()
+    {
         if (grabInteractable != null)
         {
-            grabInteractable.selectEntered.AddListener(OnGrab);
             grabInteractable.selectExited.AddListener(OnRelease);
         }
     }
 
-    private void OnGrab(SelectEnterEventArgs args)
+    public void Disable()
     {
+        if (grabInteractable != null)
+        {
+            grabInteractable.selectExited.RemoveListener(OnRelease);
+        }
+    }
+
+    public void OnGrab()
+    {
+        _initialRotation = transform.rotation;
         StartCoroutine(TrackRotation());
     }
 
     private void OnRelease(SelectExitEventArgs args)
     {
-        StopAllCoroutines();
+        StopCoroutine(TrackRotation());
     }
 
     private IEnumerator TrackRotation()
     {
         while (true)
         {
-            if (Quaternion.Angle(transform.rotation, _initialRotation) > rotationThreshold && !_rotationEventTriggered)
+            if (Quaternion.Angle(transform.rotation, _initialRotation) >= rotationThreshold && !_rotationEventTriggered)
             {
                 OnObjectRotated();
             }
@@ -68,6 +79,7 @@ public class RotatableObject : MonoBehaviour
         _rotationEventTriggered = true;
 
         Debug.Log($"Объект повернут! Новый поворот: {transform.rotation.eulerAngles}");
+        grabInteractable.enabled = false;
 
         OnObjectRotatedEvent?.Invoke();
     }
@@ -76,7 +88,6 @@ public class RotatableObject : MonoBehaviour
     {
         if (grabInteractable != null)
         {
-            grabInteractable.selectEntered.RemoveListener(OnGrab);
             grabInteractable.selectExited.RemoveListener(OnRelease);
         }
     }
