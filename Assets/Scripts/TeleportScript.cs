@@ -9,7 +9,6 @@ public class TeleportScript : MonoBehaviour
     void Update()
     {
         CheckIfOutOfBounds();
-
     }
 
     void TeleportToTarget()

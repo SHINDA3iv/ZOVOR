@@ -156,6 +156,7 @@ MonoBehaviour:
   door2Hinge: {fileID: 3541773993236410365}
   door1Handle: {fileID: 1940214616498528117}
   door2Handle: {fileID: 8379608628144201414}
+  light: {fileID: 0}
   socket: {fileID: 4672758935113281925}
   insertSound: {fileID: 0}
 --- !u!114 &1638748785696877748
@@ -386,7 +387,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1945916040767702111}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1547,7 +1548,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6507007720195952452}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

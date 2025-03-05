@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/PuzzleScenesVentil.unity
+    guid: f1fe5af5203a8764ca99506d150d7497
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 4d05ff35dc8a28a4c8ca3d693434c263, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 0d9122002c92a4d47815cf93bf2d13b9, type: 2}

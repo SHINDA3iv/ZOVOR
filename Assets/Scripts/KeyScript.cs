@@ -14,6 +14,7 @@ public class KeyScript : MonoBehaviour
     [SerializeField] private HingeJoint door2Hinge;
     [SerializeField] private HandleXRGrabInteractable door1Handle;
     [SerializeField] private HandleXRGrabInteractable door2Handle;
+    [SerializeField] private Light light;
 
     private Rigidbody door1Rigidbody;
     private Rigidbody door2Rigidbody;
@@ -134,6 +135,8 @@ public class KeyScript : MonoBehaviour
 
         grabInteractable.trackPosition = false;
         grabInteractable.trackRotation = false;
+
+        light.gameObject.SetActive(false);
 
         CreateAndConfigureJoint();
         rotatableObject.Enable();
