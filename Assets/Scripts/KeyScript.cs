@@ -14,6 +14,8 @@ public class KeyScript : MonoBehaviour
     [SerializeField] private HingeJoint door2Hinge;
     [SerializeField] private HandleXRGrabInteractable door1Handle;
     [SerializeField] private HandleXRGrabInteractable door2Handle;
+    [SerializeField] private Light keyHoleLight;
+    [SerializeField] private Light keyLight;
 
     private Rigidbody door1Rigidbody;
     private Rigidbody door2Rigidbody;
@@ -44,12 +46,16 @@ public class KeyScript : MonoBehaviour
 
         grabInteractable.selectEntered.AddListener(OnSelectEntered);
         grabInteractable.selectExited.AddListener(OnSelectExited);
+
+        keyHoleLight.enabled = false;
     }
 
     private void OnSelectEntered(SelectEnterEventArgs args)
     {
         if (!isInserted)
         {
+            keyHoleLight.enabled = true;
+            keyLight.enabled = false;
             transform.rotation = socket.transform.rotation;
             StartCoroutine(CheckKeyMovement());
         }
@@ -84,10 +90,14 @@ public class KeyScript : MonoBehaviour
     {
         StopAllCoroutines();
 
-        if (!isInserted && Vector3.Distance(transform.position, socket.transform.position) < 0.1f)
-        {
+        if (isInserted)
+            return;
+
+        keyHoleLight.enabled = false;
+        keyLight.enabled = true;
+
+        if (Vector3.Distance(transform.position, socket.transform.position) < 0.1f)
             InsertKey();
-        }
     }
 
     private IEnumerator CheckKeyMovement()
@@ -112,6 +122,8 @@ public class KeyScript : MonoBehaviour
 
     private void InsertKey()
     {
+        keyHoleLight.enabled = false;
+        keyLight.enabled = false;
         isInserted = true;
 
         if (insertSound != null)

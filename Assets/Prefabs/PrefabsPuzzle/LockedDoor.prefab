@@ -37,7 +37,6 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.2, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 781203148026257149}
   - {fileID: 8690321094856614758}
   m_Father: {fileID: 3496110526959165696}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
@@ -156,6 +155,8 @@ MonoBehaviour:
   door2Hinge: {fileID: 3541773993236410365}
   door1Handle: {fileID: 1940214616498528117}
   door2Handle: {fileID: 8379608628144201414}
+  keyHoleLight: {fileID: 0}
+  keyLight: {fileID: 0}
   socket: {fileID: 4672758935113281925}
   insertSound: {fileID: 0}
 --- !u!114 &1638748785696877748
@@ -1354,6 +1355,7 @@ Transform:
   - {fileID: 2705616038180022102}
   - {fileID: 1111168873662942188}
   - {fileID: 6005811315633346917}
+  - {fileID: 781203148026257149}
   - {fileID: 6833345250086422091}
   m_Father: {fileID: 6190057673167171254}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2103,7 +2105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 781203148026257149}
   m_Layer: 3
-  m_Name: attch
+  m_Name: KeyAtach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2117,12 +2119,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8949160043958884422}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.216, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
+  m_LocalPosition: {x: 1.0369117, y: 0.8090001, z: -0.22400005}
+  m_LocalScale: {x: 0.20000006, y: 0.5000001, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6833345250086422091}
+  m_Father: {fileID: 3496110526959165696}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &9039155591536578179
 GameObject:
