@@ -11,7 +11,7 @@ public class RotatableObject : MonoBehaviour
     private bool _isRotated = false;
     private bool _rotationEventTriggered = false;
     private Quaternion _initialRotation;
-    private HandleXRGrabInteractable grabInteractable;
+    private XRGrabInteractable grabInteractable;
 
     /// <summary>
     /// Событие, вызываемое при повороте объекта.
@@ -30,7 +30,7 @@ public class RotatableObject : MonoBehaviour
     private void Start()
     {
         _initialRotation = transform.rotation;
-        grabInteractable = GetComponent<HandleXRGrabInteractable>();
+        grabInteractable = GetComponent<XRGrabInteractable>();
     }
 
     public void Enable()
@@ -51,7 +51,6 @@ public class RotatableObject : MonoBehaviour
 
     public void OnGrab()
     {
-        _initialRotation = transform.rotation;
         StartCoroutine(TrackRotation());
     }
 
@@ -79,7 +78,7 @@ public class RotatableObject : MonoBehaviour
         _rotationEventTriggered = true;
 
         Debug.Log($"Объект повернут! Новый поворот: {transform.rotation.eulerAngles}");
-        DestroyObject(grabInteractable);
+        grabInteractable.enabled = false;
 
         OnObjectRotatedEvent?.Invoke();
     }
