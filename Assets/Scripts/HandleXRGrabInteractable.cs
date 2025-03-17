@@ -89,7 +89,7 @@ public class HandleXRGrabInteractable : XRGrabInteractable
         {
             Vector3 distance = this.transform.position - handTransform.position;
 
-            if (distance.magnitude > 0.3f)
+            if (distance.magnitude > 0.7f)
             {
                 this.enabled = false;
                 this.enabled = true;

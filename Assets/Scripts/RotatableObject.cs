@@ -79,7 +79,7 @@ public class RotatableObject : MonoBehaviour
         _rotationEventTriggered = true;
 
         Debug.Log($"Объект повернут! Новый поворот: {transform.rotation.eulerAngles}");
-        grabInteractable.enabled = false;
+        DestroyObject(grabInteractable);
 
         OnObjectRotatedEvent?.Invoke();
     }
