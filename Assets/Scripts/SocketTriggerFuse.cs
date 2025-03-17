@@ -1,40 +1,46 @@
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class SocketTriggerFuse : MonoBehaviour
 {
-    // Ссылка на основной менеджер логики
     public FusePanelLogic fusePanelLogic;
+    private bool isOccupied = false; 
 
     private void OnTriggerEnter(Collider other)
     {
-        // Проверяем, что в сокет вставлен предохранитель
+        if (isOccupied) return;
+
         if (other.CompareTag("Fuse"))
         {
-            Debug.Log("Предохранитель вставлен в сокет: " + this.name);
+            isOccupied = true;
+            SnapToSocket(other.transform);
 
-            // Получаем коллайдер на объекте предохранителя
-            Collider fuseCollider = other.GetComponent<Collider>();
-
-            // Если коллайдер найден, отключаем его
-            if (fuseCollider != null)
+            XRGrabInteractable grabInteractable = other.GetComponent<XRGrabInteractable>();
+            if (grabInteractable != null)
             {
-                fuseCollider.enabled = false;
-                Debug.Log("Collider отключен для объекта: " + other.name);
-            }
-            else
-            {
-                Debug.LogWarning("Collider не найден на объекте: " + other.name);
+                grabInteractable.enabled = false;
             }
 
-            // Вызываем метод из основного менеджера логики
-            if (fusePanelLogic != null)
+            Rigidbody rb = other.GetComponent<Rigidbody>();
+            if (rb != null)
             {
-                fusePanelLogic.OnFusePlaced(other.gameObject, this.gameObject);
+                rb.isKinematic = true;
+                rb.useGravity = false;
             }
-            else
+
+            XRSocketInteractor socketInteractor = GetComponent<XRSocketInteractor>();
+            if (socketInteractor != null)
             {
-                Debug.LogError("FusePanelLogic не назначен!");
+                socketInteractor.enabled = false;
             }
+
+            fusePanelLogic?.OnFusePlaced(other.gameObject, gameObject);
         }
+    }
+
+    private void SnapToSocket(Transform fuseTransform)
+    {
+        fuseTransform.position = transform.position;
+        fuseTransform.rotation = transform.rotation;
     }
 }
