@@ -52,6 +52,7 @@ public class KeyScript : MonoBehaviour
 
     private void OnSelectEntered(SelectEnterEventArgs args)
     {
+        Debug.Log("[KEYSCRIPT] " + rigidbody.isKinematic);
         if (!isInserted)
         {
             keyHoleLight.enabled = true;
@@ -66,6 +67,7 @@ public class KeyScript : MonoBehaviour
 
             StartCoroutine(ApplyRotation(args.interactorObject.transform));
         }
+        Debug.Log("[KEYSCRIPT] " + rigidbody.isKinematic);
     }
 
     private IEnumerator ApplyRotation(Transform controllerTransform)
@@ -122,6 +124,7 @@ public class KeyScript : MonoBehaviour
 
     private void InsertKey()
     {
+        Debug.Log("ISNERT");
         keyHoleLight.enabled = false;
         keyLight.enabled = false;
         isInserted = true;

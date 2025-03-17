@@ -5842,7 +5842,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4313205579732052909}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5855,7 +5855,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 30508915234a0284c818bda00d46d9ac, type: 2}
+  - {fileID: 2100000, guid: 2b6f3ecba218f0c42b68a92719fb0ce4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5919,7 +5919,8 @@ GameObject:
   - component: {fileID: 5280290147491266957}
   - component: {fileID: 6716754175712845071}
   - component: {fileID: 979472626330622780}
-  - component: {fileID: 8024098976541404992}
+  - component: {fileID: 4762974908049945490}
+  - component: {fileID: 4140523091586318448}
   m_Layer: 0
   m_Name: Sphere (3)
   m_TagString: Untagged
@@ -6013,7 +6014,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8024098976541404992
+--- !u!114 &4762974908049945490
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6022,7 +6023,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 4317827038826888015}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 0385757265103264dae23a8c2c82ea43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4140523091586318448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4317827038826888015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30474df1ad77aa54b952c3300cd5a125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -6063,7 +6076,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_ShowInteractableHoverMeshes: 1
-  m_InteractableHoverMeshMaterial: {fileID: 2100000, guid: 30508915234a0284c818bda00d46d9ac, type: 2}
+  m_InteractableHoverMeshMaterial: {fileID: 0}
   m_InteractableCantHoverMeshMaterial: {fileID: 0}
   m_SocketActive: 1
   m_InteractableHoverScale: 1
@@ -6080,7 +6093,8 @@ GameObject:
   - component: {fileID: 1581123201296384952}
   - component: {fileID: 3800202045508076114}
   - component: {fileID: 6552497759172286104}
-  - component: {fileID: 1431380379464639140}
+  - component: {fileID: 4051816294291472201}
+  - component: {fileID: 928914280650413326}
   m_Layer: 0
   m_Name: Sphere (4)
   m_TagString: Untagged
@@ -6174,7 +6188,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1431380379464639140
+--- !u!114 &4051816294291472201
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6183,7 +6197,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 4629179909740788633}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 0385757265103264dae23a8c2c82ea43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &928914280650413326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4629179909740788633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30474df1ad77aa54b952c3300cd5a125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -6224,7 +6250,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_ShowInteractableHoverMeshes: 1
-  m_InteractableHoverMeshMaterial: {fileID: 2100000, guid: 30508915234a0284c818bda00d46d9ac, type: 2}
+  m_InteractableHoverMeshMaterial: {fileID: 0}
   m_InteractableCantHoverMeshMaterial: {fileID: 0}
   m_SocketActive: 1
   m_InteractableHoverScale: 1
@@ -6241,7 +6267,8 @@ GameObject:
   - component: {fileID: 937898714997783785}
   - component: {fileID: 2412646246779482286}
   - component: {fileID: 2809849680781671655}
-  - component: {fileID: 4988360397171933779}
+  - component: {fileID: 5023670689606136969}
+  - component: {fileID: 4641359581403242896}
   m_Layer: 0
   m_Name: Sphere (1)
   m_TagString: Untagged
@@ -6335,7 +6362,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4988360397171933779
+--- !u!114 &5023670689606136969
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6344,7 +6371,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 6461620952484752147}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 0385757265103264dae23a8c2c82ea43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4641359581403242896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6461620952484752147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30474df1ad77aa54b952c3300cd5a125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -6385,7 +6424,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_ShowInteractableHoverMeshes: 1
-  m_InteractableHoverMeshMaterial: {fileID: 2100000, guid: 30508915234a0284c818bda00d46d9ac, type: 2}
+  m_InteractableHoverMeshMaterial: {fileID: 0}
   m_InteractableCantHoverMeshMaterial: {fileID: 0}
   m_SocketActive: 1
   m_InteractableHoverScale: 1
@@ -6402,7 +6441,8 @@ GameObject:
   - component: {fileID: 8802895782264188371}
   - component: {fileID: 5599954673793818780}
   - component: {fileID: 764808211562126129}
-  - component: {fileID: 6808440525565897670}
+  - component: {fileID: 6823063167299438762}
+  - component: {fileID: 4949371360418127322}
   m_Layer: 0
   m_Name: Sphere (2)
   m_TagString: Untagged
@@ -6496,7 +6536,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6808440525565897670
+--- !u!114 &6823063167299438762
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6505,7 +6545,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 6888459213712866680}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 0385757265103264dae23a8c2c82ea43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4949371360418127322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6888459213712866680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30474df1ad77aa54b952c3300cd5a125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -6546,7 +6598,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_ShowInteractableHoverMeshes: 1
-  m_InteractableHoverMeshMaterial: {fileID: 2100000, guid: 30508915234a0284c818bda00d46d9ac, type: 2}
+  m_InteractableHoverMeshMaterial: {fileID: 0}
   m_InteractableCantHoverMeshMaterial: {fileID: 0}
   m_SocketActive: 1
   m_InteractableHoverScale: 1
@@ -6563,7 +6615,8 @@ GameObject:
   - component: {fileID: 6396945049049799053}
   - component: {fileID: 1468113930093850645}
   - component: {fileID: 2394975601782607557}
-  - component: {fileID: 1081342044004704369}
+  - component: {fileID: 7704528918157636742}
+  - component: {fileID: 6546821700651458895}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -6657,7 +6710,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1081342044004704369
+--- !u!114 &7704528918157636742
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6666,7 +6719,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 7129945494677801301}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 0385757265103264dae23a8c2c82ea43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6546821700651458895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7129945494677801301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30474df1ad77aa54b952c3300cd5a125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -6707,7 +6772,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_ShowInteractableHoverMeshes: 1
-  m_InteractableHoverMeshMaterial: {fileID: 2100000, guid: 30508915234a0284c818bda00d46d9ac, type: 2}
+  m_InteractableHoverMeshMaterial: {fileID: 0}
   m_InteractableCantHoverMeshMaterial: {fileID: 0}
   m_SocketActive: 1
   m_InteractableHoverScale: 1

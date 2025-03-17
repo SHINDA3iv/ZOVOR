@@ -9,6 +9,7 @@ public class Teleport : MonoBehaviour
     [SerializeField] private GameObject parentObject;
 
     private Vector3 initialPosition;
+    private Rigidbody rb;
 
     void Start()
     {
@@ -18,6 +19,8 @@ public class Teleport : MonoBehaviour
         {
             respawnPosition.position = initialPosition;
         }
+
+        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -30,6 +33,12 @@ public class Teleport : MonoBehaviour
 
     private void RespawnObject()
     {
+        if (rb != null)
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
+
         transform.position = respawnPosition.position;
 
         if (parentObject != null)
