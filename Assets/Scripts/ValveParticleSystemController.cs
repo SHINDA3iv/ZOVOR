@@ -5,11 +5,11 @@ public class ValveParticleSystemController : MonoBehaviour
     public ParticleSystem particleSystem;
     public Collider valveCollider;
 
-    private RotatableObject rotatableObject;
+    private VentilRotatableObject rotatableObject;
 
     void Start()
     {
-        rotatableObject = GetComponent<RotatableObject>();
+        rotatableObject = GetComponent<VentilRotatableObject>();
 
         rotatableObject.OnObjectRotatedEvent += RotatedObject;
     }
@@ -25,6 +25,14 @@ public class ValveParticleSystemController : MonoBehaviour
         else
         {
             Debug.LogWarning("Коллайдер не найден! Убедитесь, что он назначен в инспекторе или существует на объекте.");
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (rotatableObject != null)
+        {
+            rotatableObject.OnObjectRotatedEvent -= RotatedObject;
         }
     }
 }
