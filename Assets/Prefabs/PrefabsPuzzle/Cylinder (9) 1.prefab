@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7906523051129416776}
   - component: {fileID: 7460945383377350607}
   - component: {fileID: 4697931715934678915}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 5770556461100395223}
   - component: {fileID: 3795877870608791856}
   - component: {fileID: 2386689693307605127}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 5492411637965597790}
   - component: {fileID: 2173035914425066603}
   - component: {fileID: 2914328117869959031}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 7326347024896405589}
   - component: {fileID: 8920950643132493123}
   - component: {fileID: 4093923077926630414}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder (9) 1
   m_TagString: Fuse
   m_Icon: {fileID: 0}
@@ -570,7 +570,7 @@ MonoBehaviour:
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 2
+  m_MovementType: 0
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1

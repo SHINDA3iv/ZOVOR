@@ -59,7 +59,7 @@ public class VentilRotatableObject : MonoBehaviour
             _currentRotationAngle = Mathf.Clamp(_currentRotationAngle, 0, maxRotationAngle);
 
             // Применяем поворот к объекту
-            transform.rotation = _initialRotation * Quaternion.Euler(0, _currentRotationAngle, 0);
+            transform.rotation = _initialRotation * Quaternion.Euler(_currentRotationAngle, 0, 0);
 
             // Проверяем, достигнут ли максимальный угол поворота
             if (_currentRotationAngle >= maxRotationAngle && !_isFullyRotated)

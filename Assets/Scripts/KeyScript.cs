@@ -7,7 +7,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class KeyScript : MonoBehaviour
 {
     private XRGrabInteractable grabInteractable;
-    private RotatableObject rotatableObject;
     private new Rigidbody rigidbody;
 
     [SerializeField] private HingeJoint door1Hinge;
@@ -27,15 +26,9 @@ public class KeyScript : MonoBehaviour
     public AudioClip insertSound;
     private AudioSource audioSource;
 
-    private ConfigurableJoint joint;
-
-    private Quaternion initialControllerRotation;
-    private Quaternion initialObjectRotation;
-
     void Start()
     {
         grabInteractable = GetComponent<XRGrabInteractable>();
-        rotatableObject = GetComponent<RotatableObject>();
         rigidbody = GetComponent<Rigidbody>();
 
         door1Rigidbody = door1Hinge.GetComponent<Rigidbody>();
@@ -52,45 +45,18 @@ public class KeyScript : MonoBehaviour
 
     private void OnSelectEntered(SelectEnterEventArgs args)
     {
-        Debug.Log("[KEYSCRIPT] " + rigidbody.isKinematic);
         if (!isInserted)
         {
             keyHoleLight.enabled = true;
             keyLight.enabled = false;
             transform.rotation = socket.transform.rotation;
-            StartCoroutine(CheckKeyMovement());
-        }
-        else
-        {
-            initialControllerRotation = args.interactorObject.transform.rotation;
-            initialObjectRotation = transform.rotation;
-
-            StartCoroutine(ApplyRotation(args.interactorObject.transform));
-        }
-        Debug.Log("[KEYSCRIPT] " + rigidbody.isKinematic);
-    }
-
-    private IEnumerator ApplyRotation(Transform controllerTransform)
-    {
-        while (grabInteractable.isSelected)
-        {
-            Quaternion deltaRotation = controllerTransform.rotation * Quaternion.Inverse(initialControllerRotation);
-
-            float angleX = deltaRotation.eulerAngles.x;
-
-            if (angleX > 180) angleX -= 360;
-
-            angleX = Mathf.Clamp(angleX, 0f, 90f);
-
-            transform.rotation = initialObjectRotation * Quaternion.Euler(0, angleX, 0);
-
-            yield return null;
+            //StartCoroutine(CheckKeyMovement());
         }
     }
 
     private void OnSelectExited(SelectExitEventArgs args)
     {
-        StopAllCoroutines();
+        //StopAllCoroutines();
 
         if (isInserted)
             return;
@@ -102,29 +68,27 @@ public class KeyScript : MonoBehaviour
             InsertKey();
     }
 
-    private IEnumerator CheckKeyMovement()
-    {
-        Vector3 initialPosition = transform.position;
+    //private IEnumerator CheckKeyMovement()
+    //{
+    //    while (true)
+    //    {
+    //        if (Vector3.Distance(transform.position, socket.transform.position) < 0.1f)
+    //        {
+    //            Debug.Log("Break");
+    //            break;
+    //        }
 
-        while (true)
-        {
-            if (Vector3.Distance(initialPosition, transform.position) > 0.01f)
-            {
-                break;
-            }
+    //        yield return null;
+    //    }
 
-            yield return null;
-        }
-
-        if (!isInserted && Vector3.Distance(transform.position, socket.transform.position) < 0.1f)
-        {
-            InsertKey();
-        }
-    }
+    //    if (!isInserted && Vector3.Distance(transform.position, socket.transform.position) < 0.1f)
+    //    {
+    //        InsertKey();
+    //    }
+    //}
 
     private void InsertKey()
     {
-        Debug.Log("ISNERT");
         keyHoleLight.enabled = false;
         keyLight.enabled = false;
         isInserted = true;
@@ -137,51 +101,15 @@ public class KeyScript : MonoBehaviour
         transform.position = socket.transform.position;
         transform.rotation = socket.transform.rotation;
 
-        int keyLayer = LayerMask.NameToLayer("Key");
-        door2Rigidbody.excludeLayers = keyLayer;
-
         rigidbody.useGravity = false;
         rigidbody.isKinematic = true;
-
-        rigidbody.constraints = RigidbodyConstraints.FreezePosition
-                      | RigidbodyConstraints.FreezeRotationY
-                      | RigidbodyConstraints.FreezeRotationZ;
 
         grabInteractable.trackPosition = false;
         grabInteractable.trackRotation = false;
 
-        CreateAndConfigureJoint();
-        rotatableObject.Enable();
-        rotatableObject.OnGrab();
-        rotatableObject.OnObjectRotatedEvent += DoorOpened;
+        DoorOpened();
     }
 
-    private void CreateAndConfigureJoint()
-    {
-        joint = gameObject.AddComponent<ConfigurableJoint>();
-
-        joint.connectedBody = socket.GetComponent<Rigidbody>();
-        if (joint.connectedBody == null)
-        {
-            Debug.LogError("Socket does not have a Rigidbody component. Please add one.");
-            return;
-        }
-
-        joint.xMotion = ConfigurableJointMotion.Locked;
-        joint.yMotion = ConfigurableJointMotion.Locked;
-        joint.zMotion = ConfigurableJointMotion.Locked;
-
-        joint.angularXMotion = ConfigurableJointMotion.Limited;
-        joint.angularYMotion = ConfigurableJointMotion.Locked;
-        joint.angularZMotion = ConfigurableJointMotion.Locked;
-
-        SoftJointLimit limit = new SoftJointLimit();
-        limit.limit = 90f;
-        joint.lowAngularXLimit = limit;
-        joint.highAngularXLimit = limit;
-        joint.axis = Vector3.right;
-        joint.secondaryAxis = Vector3.up;
-    }
 
     private void DoorOpened()
     {
@@ -193,19 +121,13 @@ public class KeyScript : MonoBehaviour
         door1Rigidbody.isKinematic = false;
         door2Rigidbody.isKinematic = false;
 
-        joint.angularXMotion = ConfigurableJointMotion.Locked;
         GetComponent<Collider>().enabled = false;
-
-        rotatableObject.Disable();
-        rotatableObject.OnObjectRotatedEvent -= DoorOpened;
+        Debug.Log("Дверь открыта!");
     }
 
     private void OnDestroy()
     {
         grabInteractable.selectEntered.RemoveListener(OnSelectEntered);
         grabInteractable.selectExited.RemoveListener(OnSelectExited);
-
-        rotatableObject.Disable();
-        rotatableObject.OnObjectRotatedEvent -= DoorOpened;
     }
 }
