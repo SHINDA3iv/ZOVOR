@@ -355,9 +355,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1369146201438257560}
     m_Modifications:
+    - target: {fileID: 928914280650413326, guid: 413587a4a4e5f754181336e5cc99a3ff, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 2147483655
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140523091586318448, guid: 413587a4a4e5f754181336e5cc99a3ff, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 2147483655
+      objectReference: {fileID: 0}
     - target: {fileID: 4313205579732052909, guid: 413587a4a4e5f754181336e5cc99a3ff, type: 3}
       propertyPath: m_Name
       value: Torus
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641359581403242896, guid: 413587a4a4e5f754181336e5cc99a3ff, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 2147483655
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949371360418127322, guid: 413587a4a4e5f754181336e5cc99a3ff, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 2147483655
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546821700651458895, guid: 413587a4a4e5f754181336e5cc99a3ff, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 2147483655
       objectReference: {fileID: 0}
     - target: {fileID: 7785823660574009750, guid: 413587a4a4e5f754181336e5cc99a3ff, type: 3}
       propertyPath: m_LocalPosition.x
