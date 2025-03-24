@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.2737065, g: 0.23362488, b: 0.22466815, a: 1}
+  m_IndirectSpecularColor: {r: 0.27370077, g: 0.23361886, b: 0.2246601, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4345,7 +4345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 261460671167076616, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.435
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 261460671167076616, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4383,6 +4383,34 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1323544803}
+    - target: {fileID: 772932108935608496, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
+      propertyPath: m_CameraYOffset
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 772932108935608496, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
+      propertyPath: m_RequestedTrackingOriginMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 952106349277608242, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 952106349277608242, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 952106349277608242, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 952106349277608242, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 952106349277608242, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1937085759295692910, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.07787453
@@ -4395,6 +4423,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.07787453
       objectReference: {fileID: 0}
+    - target: {fileID: 1937085759378357327, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2260747836888840330, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -4402,6 +4434,14 @@ PrefabInstance:
     - target: {fileID: 2425818982149357307, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
       propertyPath: m_Name
       value: XR Interaction Setup
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268069268884718253, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521063257545948035, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
+      propertyPath: m_MinHeight
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8592764417532806496, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
       propertyPath: m_Mesh
