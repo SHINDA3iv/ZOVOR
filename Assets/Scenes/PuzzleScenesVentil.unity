@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.27370077, g: 0.23361886, b: 0.2246601, a: 1}
+  m_IndirectSpecularColor: {r: 0.2737065, g: 0.23362488, b: 0.22466815, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -527,6 +527,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2653556522011833440, guid: dca2c8ce277470f44a4f3a3670384291, type: 3}
   m_PrefabInstance: {fileID: 695274666}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &758743265 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 261460671167076616, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
+  m_PrefabInstance: {fileID: 4505756590494225094}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &829852069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -965,6 +970,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3260655706610464276, guid: 4f38236692844774f92682ad81b91562, type: 3}
   m_PrefabInstance: {fileID: 1065758229}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1133707090 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1937085759295692909, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
+  m_PrefabInstance: {fileID: 4505756590494225094}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1133707096
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133707090}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1245050008
 GameObject:
   m_ObjectHideFlags: 0
@@ -2592,6 +2623,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2653556522011833440, guid: dca2c8ce277470f44a4f3a3670384291, type: 3}
   m_PrefabInstance: {fileID: 1643310495}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1645401796 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 952106349277608241, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
+  m_PrefabInstance: {fileID: 4505756590494225094}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1645401803
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645401796}
+  serializedVersion: 4
+  m_Mass: 4
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 2
 --- !u!1001 &1659358422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3338,6 +3401,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5907706929521389652, guid: 791277ea4b660244ca02e7a6688bc887, type: 3}
   m_PrefabInstance: {fileID: 2142892251}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2145384666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2145384667}
+  m_Layer: 0
+  m_Name: PhisicsTrick
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2145384667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145384666}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 758743265}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!138 &94659371319521647
 FixedJoint:
   m_ObjectHideFlags: 0
@@ -4289,6 +4383,18 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1323544803}
+    - target: {fileID: 1937085759295692910, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.07787453
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937085759295692910, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.07787453
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937085759295692910, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.07787453
+      objectReference: {fileID: 0}
     - target: {fileID: 2260747836888840330, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -4303,8 +4409,17 @@ PrefabInstance:
       objectReference: {fileID: 1323544803}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 261460671167076616, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 2145384667}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 952106349277608241, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1645401803}
+    - targetCorrespondingSourceObject: {fileID: 1937085759295692909, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1133707096}
   m_SourcePrefab: {fileID: 100100000, guid: 2ea6162b913128e459270eddf202dadb, type: 3}
 --- !u!65 &4508693316237719374
 BoxCollider:
@@ -5290,5 +5405,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 1309891441}
   - {fileID: 8176372982736119427}
-  - {fileID: 4505756590494225094}
   - {fileID: 1745025926}
+  - {fileID: 4505756590494225094}
