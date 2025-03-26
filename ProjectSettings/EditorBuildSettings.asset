@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/PuzzleScenesVentil.unity
     guid: f1fe5af5203a8764ca99506d150d7497
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenuScene.unity
     guid: 2716b556548c6934fb87b1031f1299fe
   - enabled: 1
