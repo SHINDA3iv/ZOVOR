@@ -12,6 +12,12 @@ public class PauseMenu : MonoBehaviour
 
     public Transform playerCamera;
 
+
+    private void Awake()
+    {
+        playerCamera = FindAnyObjectByType<Camera>().gameObject.transform;    
+    }
+
     private void OnEnable()
     {
         // Подписка на событие нажатия кнопки
