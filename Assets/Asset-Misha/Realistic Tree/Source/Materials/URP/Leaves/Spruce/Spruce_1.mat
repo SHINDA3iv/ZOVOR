@@ -84,19 +84,19 @@ Material:
     m_Ints: []
     m_Floats:
     - Vector1_15425b8b103a4e46acb8796d0a7d47b9: 10
-    - Vector1_16459bbb1d07443993d6e5d2236b6dd1: 10
+    - Vector1_16459bbb1d07443993d6e5d2236b6dd1: 0
     - Vector1_298a8adeeafa4765807912f3f222cb52: 0
     - Vector1_2f50a0630c94441fb682cddfa70cadaf: 0
     - Vector1_48307e745e604cb49641bf5f2a3ed14c: 20
-    - Vector1_682f99ec21134f4fae0c96f53991898e: 0.54
+    - Vector1_682f99ec21134f4fae0c96f53991898e: 0
     - Vector1_6e7442fb55b047f0a20d788f2277d98a: 0.454
     - Vector1_7c4b0ab460c949e098609f36717c4248: 0.518
     - Vector1_8d87f1b556494ef5b148c9192e41b037: 0
     - Vector1_986b25076f8146d98b0950540d981908: 15
     - Vector1_9b0f802440f84f7f99368572dd2b5e85: 1
     - Vector1_a45823b65a1f4c08986ef1b9e2ad6ee6: 0
-    - Vector1_abcfe820995d418eacb91b7a44f21b98: 5
-    - Vector1_b0ddedae341d4c7ba1d429299f3078ea: 0.4
+    - Vector1_abcfe820995d418eacb91b7a44f21b98: 0
+    - Vector1_b0ddedae341d4c7ba1d429299f3078ea: 0
     - Vector1_e0c9128a22d64085815fe24067463d44: 0
     - Vector1_eabdb1c804a3442f8655288ebb89e349: 0.14
     - Vector1_f7e883d5cc6f4180ac63b0e77b01f752: 0.2
