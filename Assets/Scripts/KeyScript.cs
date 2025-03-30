@@ -15,9 +15,11 @@ public class KeyScript : MonoBehaviour
     [SerializeField] private HandleXRGrabInteractable door2Handle;
     [SerializeField] private Light keyHoleLight;
     [SerializeField] private Light keyLight;
+    [SerializeField] private GameObject doorRigidbody;
 
     private Rigidbody door1Rigidbody;
     private Rigidbody door2Rigidbody;
+
 
     public GameObject socket;
 
@@ -117,7 +119,7 @@ public class KeyScript : MonoBehaviour
 
         door1Handle.enabled = true;
         door2Handle.enabled = true;
-
+        Destroy(doorRigidbody); 
         door1Rigidbody.isKinematic = false;
         door2Rigidbody.isKinematic = false;
 
