@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: ZOVORPazzle
+  productName: ZOVORPazzleTRY
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -136,7 +136,10 @@ PlayerSettings:
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
   bundleVersion: 0.1
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 6788365259618540934, guid: 0d9122002c92a4d47815cf93bf2d13b9, type: 2}
+  - {fileID: 11400000, guid: 4d05ff35dc8a28a4c8ca3d693434c263, type: 2}
+  - {fileID: -2853614367701051149, guid: de26adfca03edc7489cf727924387eec, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -156,7 +159,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.DefaultCompany.ZOVORPazzle
+    Android: com.DefaultCompany.ZOVORPazzleTRY
   buildNumber:
     Standalone: 0
     VisionOS: 0
