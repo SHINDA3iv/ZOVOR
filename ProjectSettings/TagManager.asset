@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fuse
+  - Terrain
+  - Beton
   layers:
   - Default
   - TransparentFX
@@ -15,9 +17,7 @@ TagManager:
   - DoorKnob
   - PostProcessing
   - Fuse
-  - 
-  - 
-  - 
+  - Flashlight
   - 
   - 
   - 
