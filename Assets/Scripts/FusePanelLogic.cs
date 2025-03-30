@@ -4,9 +4,8 @@ public class FusePanelLogic : MonoBehaviour
 {
     [Header("Door Components")]
     public HingeJoint door1Hinge;
-    public HingeJoint door2Hinge;
     public HandleXRGrabInteractable door1Handle;
-    public HandleXRGrabInteractable door2Handle;
+    [SerializeField] private GameObject doorRigidbody;
 
     private int placedFusesCount = 0;
     private bool isDoorOpened = false;
@@ -26,23 +25,22 @@ public class FusePanelLogic : MonoBehaviour
 
     private void OpenDoor()
     {
+        Destroy(doorRigidbody);
         if (isDoorOpened) return;
 
         door1Handle.enabled = true;
-        door2Handle.enabled = true;
 
         Rigidbody door1Rb = door1Hinge.GetComponent<Rigidbody>();
-        Rigidbody door2Rb = door2Hinge.GetComponent<Rigidbody>();
 
-        if (door1Rb != null && door2Rb != null)
+        if (door1Rb != null )
         {
             door1Rb.isKinematic = false;
-            door2Rb.isKinematic = false;
+
             JointLimits limits = door1Hinge.limits;
             limits.min = -90;
             limits.max = 90;
             door1Hinge.limits = limits;
-            door2Hinge.limits = limits;
+
         }
 
         foreach (Transform child in transform)
