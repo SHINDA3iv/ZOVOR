@@ -8,7 +8,7 @@ PlayerSettings:
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 3
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
@@ -46,8 +46,8 @@ PlayerSettings:
   defaultScreenHeight: 1080
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
-  m_StereoRenderingPath: 0
-  m_ActiveColorSpace: 0
+  m_StereoRenderingPath: 2
+  m_ActiveColorSpace: 1
   m_SpriteBatchVertexThreshold: 300
   m_MTRendering: 1
   mipStripping: 0
@@ -137,9 +137,8 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   bundleVersion: 0.1
   preloadedAssets:
-  - {fileID: 6788365259618540934, guid: 0d9122002c92a4d47815cf93bf2d13b9, type: 2}
-  - {fileID: 11400000, guid: 4d05ff35dc8a28a4c8ca3d693434c263, type: 2}
-  - {fileID: -2853614367701051149, guid: de26adfca03edc7489cf727924387eec, type: 2}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 4f6d5bc178fcc0448bf8a1c07fa152e0, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -167,9 +166,9 @@ PlayerSettings:
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 23
+  AndroidMinSdkVersion: 29
   AndroidTargetSdkVersion: 0
-  AndroidPreferredInstallLocation: 1
+  AndroidPreferredInstallLocation: 0
   aotOptions: 
   stripEngineCode: 1
   iPhoneStrippingLevel: 0
@@ -256,7 +255,7 @@ PlayerSettings:
   useCustomGradlePropertiesTemplate: 0
   useCustomGradleSettingsTemplate: 0
   useCustomProguardFile: 0
-  AndroidTargetArchitectures: 1
+  AndroidTargetArchitectures: 2
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
@@ -425,8 +424,8 @@ PlayerSettings:
     m_GraphicsJobMode: 0
   m_BuildTargetGraphicsAPIs:
   - m_BuildTarget: AndroidPlayer
-    m_APIs: 150000000b000000
-    m_Automatic: 1
+    m_APIs: 15000000
+    m_Automatic: 0
   - m_BuildTarget: iOSSupport
     m_APIs: 10000000
     m_Automatic: 1
@@ -737,22 +736,27 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: UNITY_POST_PROCESSING_STACK_V2
-    EmbeddedLinux: UNITY_POST_PROCESSING_STACK_V2
-    GameCoreXboxOne: UNITY_POST_PROCESSING_STACK_V2
-    Nintendo Switch: UNITY_POST_PROCESSING_STACK_V2
-    PS4: UNITY_POST_PROCESSING_STACK_V2
-    PS5: UNITY_POST_PROCESSING_STACK_V2
-    QNX: UNITY_POST_PROCESSING_STACK_V2
-    Stadia: UNITY_POST_PROCESSING_STACK_V2
-    Standalone: UNITY_POST_PROCESSING_STACK_V2
-    VisionOS: UNITY_POST_PROCESSING_STACK_V2
-    WebGL: UNITY_POST_PROCESSING_STACK_V2
-    XboxOne: UNITY_POST_PROCESSING_STACK_V2
-    tvOS: UNITY_POST_PROCESSING_STACK_V2
+    Android: UNITY_POST_PROCESSING_STACK_V2;ULTIMATEXR_USE_OCULUS_SDK
+    EmbeddedLinux: UNITY_POST_PROCESSING_STACK_V2;ULTIMATEXR_USE_OCULUS_SDK
+    GameCoreScarlett: ULTIMATEXR_USE_OCULUS_SDK
+    GameCoreXboxOne: UNITY_POST_PROCESSING_STACK_V2;ULTIMATEXR_USE_OCULUS_SDK
+    LinuxHeadlessSimulation: ULTIMATEXR_USE_OCULUS_SDK
+    Nintendo Switch: UNITY_POST_PROCESSING_STACK_V2;ULTIMATEXR_USE_OCULUS_SDK
+    PS4: UNITY_POST_PROCESSING_STACK_V2;ULTIMATEXR_USE_OCULUS_SDK
+    PS5: UNITY_POST_PROCESSING_STACK_V2;ULTIMATEXR_USE_OCULUS_SDK
+    QNX: UNITY_POST_PROCESSING_STACK_V2;ULTIMATEXR_USE_OCULUS_SDK
+    Stadia: UNITY_POST_PROCESSING_STACK_V2;ULTIMATEXR_USE_OCULUS_SDK
+    Standalone: UNITY_POST_PROCESSING_STACK_V2;ULTIMATEXR_USE_OCULUS_SDK
+    VisionOS: UNITY_POST_PROCESSING_STACK_V2;ULTIMATEXR_USE_OCULUS_SDK
+    WebGL: UNITY_POST_PROCESSING_STACK_V2;ULTIMATEXR_USE_OCULUS_SDK
+    Windows Store Apps: ULTIMATEXR_USE_OCULUS_SDK
+    XboxOne: UNITY_POST_PROCESSING_STACK_V2;ULTIMATEXR_USE_OCULUS_SDK
+    iPhone: ULTIMATEXR_USE_OCULUS_SDK
+    tvOS: UNITY_POST_PROCESSING_STACK_V2;ULTIMATEXR_USE_OCULUS_SDK
   additionalCompilerArguments: {}
   platformArchitecture: {}
-  scriptingBackend: {}
+  scriptingBackend:
+    Android: 1
   il2cppCompilerConfiguration: {}
   il2cppCodeGeneration: {}
   managedStrippingLevel:
