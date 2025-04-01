@@ -18,7 +18,7 @@ public class ScreamerTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("MainCamera"))
         {
             // Воспроизводим звук скримера
             ScreamerManager.instance.PlayScreamer(screamerSound, spawnPoint.position, volume, soundDuration);

@@ -21,8 +21,9 @@ public class T_Zombie : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("MainCamera"))
         {
+            tree.SetActive(true);
             // Делаем так, чтобы дерево падало
             if (tree != null && !isTreeFallen)
             {
@@ -43,7 +44,6 @@ public class T_Zombie : MonoBehaviour
 
     private void FallTree()
     {
-        tree.SetActive(true);
         // Запускаем анимацию падения дерева только при входе в триггер
         if (treeAnimator != null)
         {

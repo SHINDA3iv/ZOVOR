@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class FootstepManager : MonoBehaviour
 {
-    public CharacterController characterController;
     public AudioSource audioSource;
     public List<FootstepSurface> surfaces;
     public float stepInterval = 0.3f; // Шаги чаще
