@@ -5,36 +5,28 @@ using UnityEngine.InputSystem;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject menuCanvas; // Сам канвас с ScrollView
+    public GameObject menuCanvas; // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ ScrollView
     [SerializeField] bool isVisible = false;
 
     [SerializeField] private InputActionProperty buttonAction;
 
-    public Transform playerCamera;
-
-
-    private void Awake()
-    {
-        playerCamera = FindAnyObjectByType<Camera>().gameObject.transform;    
-    }
-
     private void OnEnable()
     {
-        // Подписка на событие нажатия кнопки
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         buttonAction.action.performed += OnButtonPressed;
         buttonAction.action.Enable();
     }
 
     private void OnDisable()
     {
-        // Отписка от события
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         buttonAction.action.performed -= OnButtonPressed;
         buttonAction.action.Disable();
     }
 
     private void OnButtonPressed(InputAction.CallbackContext context)
     {
-        Debug.Log("Нажата кнопка на контроллере!");
+        Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!");
         menuCanvas.SetActive(!isVisible);
         isVisible = !isVisible;
     }
