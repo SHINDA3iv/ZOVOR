@@ -16,11 +16,6 @@ public class TorusScript : MonoBehaviour
                 cameraTransform.rotation.eulerAngles.y,
                 transform.rotation.eulerAngles.z
             );
-            transform.position = new Vector3(
-                cameraTransform.position.x,
-                transform.position.y,
-                cameraTransform.position.z
-            );
         }
     }
 }

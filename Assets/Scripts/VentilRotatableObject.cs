@@ -4,14 +4,14 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class VentilRotatableObject : MonoBehaviour
 {
-    [Header("Настройки поворота")]
-    [Tooltip("Максимальный угол поворота вентиля (в градусах).")]
+    [Header("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")]
+    [Tooltip("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ).")]
     [SerializeField] private float maxRotationAngle = 80f;
 
     private Quaternion _initialRotation;
     private XRGrabInteractable grabInteractable;
     private Transform _handTransform;
-    private float _currentRotationAngle = 0f; // Текущий угол поворота
+    private float _currentRotationAngle = 0f; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     private bool _isFullyRotated = false;
 
     public event System.Action OnObjectRotatedEvent;
@@ -51,24 +51,24 @@ public class VentilRotatableObject : MonoBehaviour
 
             Vector3 currentHandDirection = (_handTransform.position - centerOfValve).normalized;
 
-            // Вычисляем изменение угла между начальным и текущим направлением
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             float angleDelta = Vector3.SignedAngle(initialHandDirection, currentHandDirection, transform.forward);
 
-            // Обновляем текущий угол поворота
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             _currentRotationAngle += angleDelta;
             _currentRotationAngle = Mathf.Clamp(_currentRotationAngle, 0, maxRotationAngle);
 
-            // Применяем поворот к объекту
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             transform.rotation = _initialRotation * Quaternion.Euler(_currentRotationAngle, 0, 0);
 
-            // Проверяем, достигнут ли максимальный угол поворота
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             if (_currentRotationAngle >= maxRotationAngle && !_isFullyRotated)
             {
                 _isFullyRotated = true;
                 OnObjectRotated();
             }
 
-            // Обновляем начальное направление для следующего кадра
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
             initialHandDirection = currentHandDirection;
 
             yield return null;
@@ -77,7 +77,7 @@ public class VentilRotatableObject : MonoBehaviour
 
     private void OnObjectRotated()
     {
-        Debug.Log($"Вентиль полностью повернут! Угол: {_currentRotationAngle}");
+        Debug.Log($"пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ! пїЅпїЅпїЅпїЅ: {_currentRotationAngle}");
         OnObjectRotatedEvent?.Invoke();
     }
 

@@ -2,47 +2,47 @@ using UnityEngine;
 
 public class ScreamerTrigger : MonoBehaviour
 {
-    public AudioClip screamerSound; // Звук скримера
-    public Transform spawnPoint; // Где создаётся звук
-    public float volume = 1f; // Громкость
-    public float soundDuration = 3f; // Время проигрывания
-    public GameObject tree; // Дерево, которое будет падать
-    private Animator treeAnimator; // Ссылка на Animator дерева
-    private bool isTreeFallen = false; // Проверка, упало ли дерево
+    public AudioClip screamerSound; // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    public Transform spawnPoint; // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+    public float volume = 1f; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    public float soundDuration = 3f; // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    public GameObject tree; // пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+    private Animator treeAnimator; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ Animator пїЅпїЅпїЅпїЅпїЅпїЅ
+    private bool isTreeFallen = false; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 
     private void Start()
     {
-        // Получаем Animator компонента дерева
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Animator пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         treeAnimator = tree.GetComponent<Animator>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("MainCamera"))
+        if (other.CompareTag("Player"))
         {
-            // Воспроизводим звук скримера
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             ScreamerManager.instance.PlayScreamer(screamerSound, spawnPoint.position, volume, soundDuration);
-            //Debug.Log("Скример активирован!");
+            //Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!");
 
-            // Делаем так, чтобы дерево падало
+            // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
             if (tree != null && !isTreeFallen)
             {
-                //Debug.Log("Дерево падает!");
+                //Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ!");
                 FallTree();
-                isTreeFallen = true; // Дерево упало, чтобы не повторить
+                isTreeFallen = true; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             }
 
-            // Удаляем сам триггер
+            // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             Destroy(gameObject);
         }
     }
 
     private void FallTree()
     {
-        // Запускаем анимацию падения дерева только при входе в триггер
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         if (treeAnimator != null)
         {
-            treeAnimator.SetTrigger("Fall"); // Запускаем триггер анимации
+            treeAnimator.SetTrigger("Fall"); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         }
 
     }
